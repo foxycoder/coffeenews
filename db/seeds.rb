@@ -9,6 +9,9 @@ Feed.all.each do |feed|
   parser = FeedParser.new(:url => feed.url)
   rssfeed = parser.parse
   rssfeed.items.each do |data|
-    Article.create title: data.title, body: data.description, picture: data.link
+  checklink = data.link
+    if Article.where(:picture => checklink).count == 0
+      Article.create title: data.title, body: data.description, picture: data.link
+    end
   end
 end
