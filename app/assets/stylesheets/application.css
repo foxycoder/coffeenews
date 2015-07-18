@@ -1,33 +1,57 @@
+body {
+    background-image: url("http://i.imgur.com/v0emmle.jpg");
+    background-color: #cccccc;
+    background-color: #b89c8e 0.68;
+    font-family: arial;
+}
+a:link,
+a:visited,
+a:active {
+    color: #baa37e;
+    text-decoration: none;
+}
+a:hover {color:#000;}
 
-            body {
-                  background-image: url("https://files.slack.com/files-pri/T07G67TT7-F07RM0JP3/coffeestains.jpg");
-               background-color: #cccccc ;
-                background-color: #b89c8e  0.68;
-                font-family: arial;
-            }
+blockquote {
+    padding: 0px 50px 30px 50px;
+    font-size:14pt;
+    line-height:20pt;
+}
+h1 {
+    text-align: center;
+    font-family: 'Special Elite' white;
+    font-size: 500%;
+}
 
-            blockquote {padding:30px 70px 30px 70px;}
+.container_article {
+    width: 700px;
+    margin: 0 auto;
+    background-color: white;
+}
+.links h1 {
+    text-align: center;
+    font-family: 'Special Elite' white;
+    font-size: 300%;
+}
+.container_body {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+.container_article h2 {
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 300%;
+    border-bottom: 1px solid #ccc;
+}
 
-            h1 {
-                text-align: center;
-                font-family: 'Special Elite' white;
-                font-size: 500%;
-            }
 
-            h1 a:link, a:visited, a:active {color:#000; text-decoration: none;}
+table {
+    width: 50%;
+    border-collapse: collapse;
 
-            .container_article {
-                width: 700px;
-                margin: 0 auto;
-                background-color: white;
-                padding:10px;
-            }
+}
 
-            h2 {
-                font-family: 'Raleway', sans-serif;
-                font-size: 300%;}
-
-          .footer {
-              padding:10px;
-              font-size:10px;
-            }
+th {
+    height: 50px;
+    text-align: left;
+}

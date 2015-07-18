@@ -2,14 +2,14 @@
 
 <% @article %>
 <div class="container_article">
-  <div class="title"> <h2> <%= @article.title %></h2> </div>
-    <div class="container_body">   <blockquote>  <%= @article.body %>  </blockquote> </div>
-  <td> <%= link_to 'Link to full Article', @article.picture %>  </td>
+
+<h2> <%= @article.title %></h2>
+    <div class="container_body">
+
+        <blockquote>  <%= @article.body %>  </blockquote> </div>
 </div>
 
-<h1>
-  <a href="./articles">Next</a>
+<div class="links"><h1> <%= link_to 'Read', @article.picture %>  <i>or</i>  <a href="/">Next?</a>
 </h1>
-<div class="footer">
-<%= link_to 'DB seed refresh', '/refresh' %> 
+<center><a href="/feeds">Admin</a></center>
 </div>
