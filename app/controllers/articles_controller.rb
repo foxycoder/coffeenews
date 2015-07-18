@@ -7,11 +7,10 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.recent
     @articles2 = Article.recent_1
-    @new_combined_feed = @articles.first(5) | @articles2.first(5)
-
-
-
-
+    @articles3 = Article.recent_2
+    @articles4 = Article.recent_3
+    @new_combined_feed = @articles.first(100) | @articles2.first(100) | @articles3.first(100) | @articles4.first(100)
+  #  @final_feed = @new_combined_feed.shuffle.first(1)
     #feed.items.each do |feed_item|
       #puts feed_item.title
       #puts feed_item.description
@@ -22,9 +21,6 @@ class ArticlesController < ApplicationController
   #@articles = Article.all
   end
 
-  #def combine
-  #    new_combined_feed = @articles | @articles2
-  #end
 
   # GET /articles/1
   # GET /articles/1.json

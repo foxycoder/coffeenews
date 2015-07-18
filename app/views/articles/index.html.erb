@@ -1,32 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Articles</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Link</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%  @final_feed = @new_combined_feed.shuffle.first(1) %>
 
-  <tbody>
-    <% @new_combined_feed.shuffle.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.description %></td>
-        <td><%= article.link %></td>
-
-
+    <% @final_feed.shuffle.each do |article| %>
+      <h1> <%= article.title %></h1>
+        <h4>  <%= article.description %> </h4>
+        <td> <%= link_to 'Link to full Article', article.link %>  </td>
     <% end %>
 
-  </tbody>
-
-
-</table>
-
 <br>
-
-<%= link_to 'New Article', new_article_path %>
