@@ -4,14 +4,11 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   # GET /articles.json
+
   def index
-    @articles = Article.recent
-    @articles2 = Article.recent_1
-    @articles3 = Article.recent_2
-    @articles4 = Article.recent_3
-    @new_combined_feed = @articles.first(100) | @articles2.first(100) | @articles3.first(100) | @articles4.first(100)
-    @article = Article.find(10)
-  end
+     offset = rand(Article.count)
+     @article = Article.find(offset)
+   end
 
 
   # GET /articles/1

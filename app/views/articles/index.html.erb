@@ -1,7 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-
 <% @article %>
-<h1> <%= @article.title %></h1>
-  <h4>  <%= @article.body %> </h4>
+<div class="container_article">
+  <div class="title"> <h2> <%= @article.title %></h2> </div>
+    <div class="container_body">   <blockquote>  <%= @article.body %>  </blockquote> </div>
   <td> <%= link_to 'Link to full Article', @article.picture %>  </td>
+</div>
+
+<h1>
+  <a href="./articles">Next</a>
+</h1>
