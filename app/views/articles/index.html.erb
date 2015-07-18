@@ -1,12 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 
-<%  @final_feed = @new_combined_feed.shuffle.first(1) %>
-
-    <% @final_feed.shuffle.each do |article| %>
-      <h1> <%= article.title %></h1>
-        <h4>  <%= article.description %> </h4>
-        <td> <%= link_to 'Link to full Article', article.link %>  </td>
-    <% end %>
-
-<br>
+<% @article %>
+<h1> <%= @article.title %></h1>
+  <h4>  <%= @article.body %> </h4>
+  <td> <%= link_to 'Link to full Article', @article.picture %>  </td>
