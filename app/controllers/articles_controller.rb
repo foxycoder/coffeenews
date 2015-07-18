@@ -10,15 +10,7 @@ class ArticlesController < ApplicationController
     @articles3 = Article.recent_2
     @articles4 = Article.recent_3
     @new_combined_feed = @articles.first(100) | @articles2.first(100) | @articles3.first(100) | @articles4.first(100)
-  #  @final_feed = @new_combined_feed.shuffle.first(1)
-    #feed.items.each do |feed_item|
-      #puts feed_item.title
-      #puts feed_item.description
-      #puts feed_item.author
-      #puts feed_item.link
-      #puts feed_item.published
-      #puts feed_item.content
-  #@articles = Article.all
+
   end
 
 

@@ -23,5 +23,7 @@ class Article < ActiveRecord::Base
     feed.items
   end
 
-
+  def self.big_feed
+    self.recent + self.recent_1 + self.recent_2 + self.recent_3
+  end
 end
