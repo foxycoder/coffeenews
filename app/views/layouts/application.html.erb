@@ -2,18 +2,17 @@
 <html>
 <head>
   <title>Coffeenews</title>
-  <link rel="stylesheet" href="//railsgirls.com/assets/bootstrap.css">
-<link rel="stylesheet" href="//railsgirls.com/assets/bootstrap-theme.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 
-  <div class="container">
+  <div class="container_logo">
+    <h1>Coffee News</h1>
+</div>
     <%= yield %>
   </div>
-
-</body>
-</html>

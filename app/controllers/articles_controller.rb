@@ -4,11 +4,18 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   # GET /articles.json
+
   def index
     random = rand(Article.count)
     @article = Article.find(random)
   end
 
+
+def refresh
+  puts "Article refresh"
+  Rails.application.load_seed
+  redirect_to '/articles'
+end
 
   # GET /articles/1
   # GET /articles/1.json
