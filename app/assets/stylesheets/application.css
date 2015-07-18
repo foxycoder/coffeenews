@@ -6,51 +6,28 @@
                 font-family: arial;
             }
 
-            blockquote {padding:100px;}
-
-            .container_logo {
-                height: 200px;
-                width: 700px;
-                margin: 0 auto;
-            }
+            blockquote {padding:30px 70px 30px 70px;}
 
             h1 {
-                display: ;
                 text-align: center;
                 font-family: 'Special Elite' white;
                 font-size: 500%;
             }
 
             h1 a:link, a:visited, a:active {color:#000; text-decoration: none;}
+
             .container_article {
-/*                display: inline-block; */
                 width: 700px;
                 margin: 0 auto;
                 background-color: white;
-                padding: 30px;
-                border-radius: 5%;
-
-            }
-
-            .container_title {
-                background-color: lightgrey;
-                padding-bottom: 30px;
+                padding:10px;
             }
 
             h2 {
-                padding-bottom: 20px;
-
                 font-family: 'Raleway', sans-serif;
-            }
-            .container_body {
-
-            }
-
-
-            .container-buttons {
-
-            }
+                font-size: 300%;}
 
           .footer {
-              font-size:100px;
+              padding:10px;
+              font-size:10px;
             }

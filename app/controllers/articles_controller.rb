@@ -11,6 +11,12 @@ class ArticlesController < ApplicationController
    end
 
 
+def refresh
+  puts "Article refresh"
+  Rails.application.load_seed
+  redirect_to '/articles'
+end
+
   # GET /articles/1
   # GET /articles/1.json
   def show
