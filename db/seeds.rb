@@ -5,7 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-Article.big_feed.each do |data|
-  Article.create title: data.title, body: data.description, picture: data.link
+Feed.all.each do |feed|
+  parser = FeedParser.new(:url => feed.url)
+  rssfeed = parser.parse
+  rssfeed.items.each do |data|
+    Article.create title: data.title, body: data.description, picture: data.link
+  end
 end

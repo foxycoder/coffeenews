@@ -1,0 +1,34 @@
+<h1>Listing feeds</h1>
+
+<%#= link_to 'Add feed', new_feed_path %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Url</th>
+  </tr>
+
+  <% @feeds.each do |feed| %>
+    <tr>
+      <td><%= feed.name %></td>
+      <td><%= feed.url %></td>
+      <td><%= link_to 'Destroy', feed_path(feed), method: :delete, data: { confirm: 'Are you sure you want to delete ' + feed.name + '?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<div class="add_new_feed">
+  <%= form_for :feed, url: feeds_path do |f| %>
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :url %><br>
+      <%= f.text_area :url %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>
